@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum DOM dan Event</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Latihan 1 & 2 -->
+    <h1 id="judul">Latihan DOM</h1>
+    <p id="pesan">Belum ada tindakan.</p>
+    <button id="tombolAksi" type="button">Klik Saya</button>
+    <button id="btnToggle" type="button">Sembunyikan/Tampilkan Paragraf</button>
+
+    <hr>
+
+    <!-- Latihan 3 -->
+    <p id="teksGaya">Teks ini akan berubah gayanya saat tombol diklik.</p>
+    <button id="tombolGaya" type="button">Ubah Gaya</button>
+
+    <hr>
+
+    <!-- Latihan 4 -->
+    <label for="namaInput">Nama:</label>
+    <input type="text" id="namaInput" maxlength="40">
+    <p>Jumlah karakter: <span id="jumlahKarakter">0</span></p>
+
+    <hr>
+
+    <!-- Latihan 5 -->
+    <form id="formPendaftaran" novalidate>
+        <label for="nama">Nama Lengkap</label>
+        <input id="nama" name="nama" type="text">
+        
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email">
+        
+        <label for="usia">Usia</label>
+        <input id="usia" name="usia" type="number" min="17" max="100">
+        
+        <button type="submit">Daftar</button>
+    </form>
+    <p id="pesanForm" aria-live="polite"></p>
+
+    <hr>
+
+    <!-- Latihan 6 & Eksperimen Mandiri 1 -->
+    <section>
+        <h2>Daftar Tugas</h2>
+        <label for="inputTugas">Tugas baru</label>
+        <input id="inputTugas" type="text">
+        <button id="tambahTugas" type="button">Tambah</button>
+        <p id="pesanTugas" aria-live="polite"></p>
+        <ul id="daftarTugas"></ul>
+    </section>
+
+    <hr>
+
+    <!-- Mini Project & Eksperimen Mandiri 2 & 3 -->
+    <section id="mini-project">
+        <h2>Form Pendaftaran Workshop</h2>
+        
+        <form id="formWorkshop" novalidate>
+            <div>
+                <label for="namaWorkshop">Nama Lengkap:</label>
+                <input type="text" id="namaWorkshop" maxlength="50" required>
+                <p>Sisa Karakter: <span id="sisaKarakter">50</span></p>
+            </div>
+
+            <div>
+                <label for="emailWorkshop">Email:</label>
+                <input type="email" id="emailWorkshop" required>
+            </div>
+
+            <div>
+                <label for="pilihanSesi">Pilih Sesi Workshop:</label>
+                <select id="pilihanSesi" required>
+                    <option value="">-- Pilih Sesi --</option>
+                    <option value="Pagi">Sesi Pagi (09:00 - 12:00)</option>
+                    <option value="Siang">Sesi Siang (13:00 - 16:00)</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit">Daftar Workshop</button>
+                <button type="button" id="btnResetForm">Reset Form</button>
+            </div>
+        </form>
+
+        <p id="pesanWorkshop" aria-live="polite"></p>
+
+        <div id="ringkasanPendaftaran">
+            <h3>Ringkasan Pendaftaran:</h3>
+            <p><strong>Nama:</strong> <span id="ringkasanNama">-</span></p>
+            <p><strong>Email:</strong> <span id="ringkasanEmail">-</span></p>
+            <p><strong>Sesi:</strong> <span id="ringkasanSesi">-</span></p>
+        </div>
+    </section>
+
+</body>
+</html>
